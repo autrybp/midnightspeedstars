@@ -46,9 +46,9 @@
         }
         .signup {
             margin-left: 10px;
-            background: #b30000;
+            background: #ff0000;
             color: white;
-            border: 2px solid #b30000;
+            border: 2px solid #ff0000;
             border-radius: 20px;
             padding: 10px 20px;
             text-decoration: none;
@@ -57,7 +57,7 @@
         }
         .signup:hover {
             background: white;
-            color: #b30000;
+            color: #ff0000;
         }
         footer {
             background: black;
@@ -65,17 +65,29 @@
             text-align: center;
             padding: 10px;
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
-        .instagram {
+        .social-icon {
             display: inline-block;
             width: 30px;
             height: 30px;
-            background: url('instagram-white.png') no-repeat center center;
             background-size: cover;
-            transition: filter 0.3s ease;
+            transition: all 0.3s ease;
+        }
+        .instagram {
+            background: url('instagram-logo.png') no-repeat center center;
         }
         .instagram:hover {
-            filter: brightness(1.2) saturate(1.5);
+            background: url('instagram-logo-hover.png') no-repeat center center;
+        }
+        .whatsapp {
+            background: url('whatsapp-logo.png') no-repeat center center;
+        }
+        .whatsapp:hover {
+            background: url('whatsapp-logo-hover.png') no-repeat center center;
         }
     </style>
 </head>
@@ -95,7 +107,8 @@
     </main>
     <footer>
         <p>&copy; 2025 Midnight Speedstars. All rights reserved.</p>
-        <a href="https://www.instagram.com/midnightspeedstars/" class="instagram"></a>
+        <a href="https://www.instagram.com/midnightspeedstars/" class="social-icon instagram"></a>
+        <a href="https://wa.me/9613038792" class="social-icon whatsapp"></a>
     </footer>
     <script>
         document.getElementById("changeColor").addEventListener("click", function() {
