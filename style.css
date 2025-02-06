@@ -26,8 +26,7 @@ button:hover {
 
 @font-face {
     font-family: 'Harlow Solid LET';
-    src: url('./HarlowSolidLET.ttf') format('truetype');
-    font-display: swap;
+    src: url('Harlow Solid LET Plain1.0.ttf') format('truetype');
 }
 
 header h1 {
