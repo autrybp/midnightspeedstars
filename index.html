@@ -5,12 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midnight Speedstars</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffffff;
+            color: #b30000;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #b30000;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        header h2 {
+            font-size: 18px;
+            font-style: italic;
+            margin-top: 5px;
+        }
+        nav {
+            background: white;
+            padding: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #b30000;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        button {
+            background-color: #b30000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #900000;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Welcome to Midnight Speedstars</h1>
-        <button id="changeColor">Change Background</button>
+        <h2>Chasing sunsets, racing stars...</h2>
     </header>
-    <script src="script.js"></script>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <p>Experience the thrill of Midnight Speedstars!</p>
+        <button id="changeColor">Change Background</button>
+    </main>
+    <script>
+        document.getElementById("changeColor").addEventListener("click", function() {
+            document.body.style.backgroundColor = document.body.style.backgroundColor === "white" ? "#f5f5f5" : "white";
+        });
+    </script>
 </body>
 </html>
