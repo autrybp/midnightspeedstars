@@ -32,12 +32,22 @@
         nav {
             background: white;
             padding: 10px;
+            display: flex;
+            justify-content: flex-end;
         }
         nav a {
             text-decoration: none;
             color: #b30000;
             margin: 0 15px;
             font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #b30000;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background: #b30000;
+            color: white;
         }
         button {
             background-color: #b30000;
@@ -52,6 +62,24 @@
         button:hover {
             background-color: #900000;
         }
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .instagram {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: url('instagram-icon.png') no-repeat center center;
+            background-size: cover;
+            transition: filter 0.3s ease;
+        }
+        .instagram:hover {
+            filter: brightness(1.5);
+        }
     </style>
 </head>
 <body>
@@ -65,9 +93,13 @@
         <a href="#contact">Contact</a>
     </nav>
     <main>
-        <p>Website in the works...</p>
+        <p>Experience the thrill of Midnight Speedstars!</p>
         <button id="changeColor">Change Background</button>
     </main>
+    <footer>
+        <p>&copy; 2025 Midnight Speedstars. All rights reserved.</p>
+        <a href="https://www.instagram.com/midnightspeedstars/" class="instagram"></a>
+    </footer>
     <script>
         document.getElementById("changeColor").addEventListener("click", function() {
             document.body.style.backgroundColor = document.body.style.backgroundColor === "white" ? "#f5f5f5" : "white";
