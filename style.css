@@ -23,3 +23,12 @@ button {
 button:hover {
     background-color: darkred;
 }
+
+@font-face {
+    font-family: "Harlow Solid LET";
+    src: url("Harlow Solid LET Plain1.0.ttf") format("truetype");
+}
+
+header h1 {
+    font-family: "Harlow Solid LET", sans-serif;
+}
