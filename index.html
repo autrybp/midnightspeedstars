@@ -139,12 +139,16 @@
             cursor: pointer;
             background-size: contain;
             background-repeat: no-repeat;
+            transition: all 0.3s ease;
         }
         .light-mode {
-            background-image: url('sun-icon.png');
+            background-image: url('darkmode.png');
         }
         .dark-mode {
-            background-image: url('moon-icon.png');
+            background-image: url('darkmode-hover.png');
+        }
+        .theme-toggle:hover {
+            filter: brightness(1.2);
         }
     </style>
 </head>
