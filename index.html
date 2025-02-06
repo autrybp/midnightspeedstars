@@ -25,6 +25,12 @@
         .nav-logo {
             max-width: 100px;
             height: auto;
+            pointer-events: none;
+            user-drag: none;
+            user-select: none;
+        }
+        .nav-logo-container {
+            cursor: pointer;
         }
         .nav-links {
             display: flex;
@@ -74,7 +80,7 @@
             nav {
                 justify-content: center;
             }
-            .nav-logo {
+            .nav-logo-container {
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%) translateY(10px);
@@ -159,7 +165,9 @@
             <div></div>
             <div></div>
         </div>
-        <img src="ms_logo_web_optim.png" alt="Midnight Speedstars Logo" class="nav-logo">
+        <div class="nav-logo-container" onclick="location.href='/'">
+            <img src="ms_logo_web_optim.png" alt="Midnight Speedstars Logo" class="nav-logo">
+        </div>
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="#shop">Shop</a>
