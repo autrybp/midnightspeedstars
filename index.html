@@ -77,7 +77,7 @@
             .nav-logo {
                 position: absolute;
                 left: 50%;
-                transform: translateX(-50%);
+                transform: translateX(-50%) translateY(10px);
             }
             .hamburger {
                 display: flex;
@@ -133,6 +133,19 @@
         .whatsapp:hover {
             background-image: url('whatsapp-logo-hover.png');
         }
+        .theme-toggle {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .light-mode {
+            background-image: url('sun-icon.png');
+        }
+        .dark-mode {
+            background-image: url('moon-icon.png');
+        }
     </style>
 </head>
 <body>
@@ -159,14 +172,29 @@
         <p>&copy; 2025 Midnight Speedstars. All rights reserved.</p>
         <a href="https://www.instagram.com/midnightspeedstars/" class="social-icon instagram"></a>
         <a href="https://wa.me/9613038792" class="social-icon whatsapp"></a>
+        <div class="theme-toggle light-mode" id="themeToggle" onclick="toggleTheme()"></div>
     </footer>
     <script>
         function toggleMenu() {
             document.querySelector(".nav-links").classList.toggle("active");
         }
-        document.getElementById("changeColor").addEventListener("click", function() {
-            document.body.style.backgroundColor = document.body.style.backgroundColor === "white" ? "#f5f5f5" : "white";
-        });
+        function toggleTheme() {
+            let body = document.body;
+            let themeToggle = document.getElementById("themeToggle");
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+                body.style.backgroundColor = "white";
+                body.style.color = "#b30000";
+                themeToggle.classList.remove("dark-mode");
+                themeToggle.classList.add("light-mode");
+            } else {
+                body.classList.add("dark");
+                body.style.backgroundColor = "#121212";
+                body.style.color = "white";
+                themeToggle.classList.remove("light-mode");
+                themeToggle.classList.add("dark-mode");
+            }
+        }
     </script>
 </body>
 </html>
