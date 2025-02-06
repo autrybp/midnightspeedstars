@@ -14,53 +14,50 @@
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: #b30000;
-            color: white;
-            padding: 20px;
-            font-size: 24px;
-        }
-        header img {
-            max-width: 200px;
-            height: auto;
-        }
-        header h2 {
-            font-size: 18px;
-            font-style: italic;
-            margin-top: 5px;
-        }
         nav {
             background: white;
             padding: 10px;
             display: flex;
-            justify-content: flex-end;
+            align-items: center;
+            justify-content: space-between;
         }
-        nav a {
+        .nav-logo {
+            max-width: 100px;
+            height: auto;
+            margin-left: 10px;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
             text-decoration: none;
             color: #b30000;
-            margin: 0 15px;
+            margin: 0 10px;
             font-weight: bold;
             padding: 10px 20px;
             border: 2px solid #b30000;
             border-radius: 20px;
             transition: all 0.3s ease;
         }
-        nav a:hover {
+        .nav-links a:hover {
             background: #b30000;
             color: white;
         }
-        button {
-            background-color: #b30000;
+        .signup {
+            margin-left: 10px;
+            background: #b30000;
             color: white;
-            border: none;
+            border: 2px solid #b30000;
+            border-radius: 20px;
             padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
-        button:hover {
-            background-color: #900000;
+        .signup:hover {
+            background: white;
+            color: #b30000;
         }
         footer {
             background: black;
@@ -73,24 +70,24 @@
             display: inline-block;
             width: 30px;
             height: 30px;
-            background: url('instagram-icon.png') no-repeat center center;
+            background: url('instagram-white.png') no-repeat center center;
             background-size: cover;
             transition: filter 0.3s ease;
         }
         .instagram:hover {
-            filter: brightness(1.5);
+            filter: brightness(1.2) saturate(1.5);
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="MS_logo_optim.png" alt="Midnight Speedstars Logo">
-        <h2>Chasing sunsets, racing stars...</h2>
-    </header>
     <nav>
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <img src="ms_logo_web_optim.png" alt="Midnight Speedstars Logo" class="nav-logo">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#signup" class="signup">Sign Up</a>
+        </div>
     </nav>
     <main>
         <p>Experience the thrill of Midnight Speedstars!</p>
